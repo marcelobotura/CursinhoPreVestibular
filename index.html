@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Downloads</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Site de Downloads</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Busque seu PDF aqui...">
+        <button onclick="searchPDF()">Buscar</button>
+    </div>
+
+    <div class="lists-container">
+        <div class="list">
+            <h2>Mais Pesquisados</h2>
+            <ul id="most-searched">
+                <li>PDF 1</li>
+                <li>PDF 2</li>
+                <li>PDF 3</li>
+                <!-- Adicione mais PDFs aqui -->
+            </ul>
+        </div>
+
+        <div class="list">
+            <h2>Mais Baixados</h2>
+            <ul id="most-downloaded">
+                <li>PDF 1</li>
+                <li>PDF 2</li>
+                <li>PDF 3</li>
+                <!-- Adicione mais PDFs aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
