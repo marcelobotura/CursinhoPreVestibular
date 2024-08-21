@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Pesquisa</title>
+    <title>Material de Apoio Cursinho Pré-Vestibular</title>
     <link rel="stylesheet" href="styles.css">
+
+    
 </head>
 <body>
     <header>
-        <h1>Biblioteca de Pesquisa</h1>
+        <h1>Material de Apoio <br> Cursinho Pré-Vestibular</h1>
         <input type="text" id="searchBar" placeholder="Pesquisar...">
     </header>
 
@@ -40,18 +42,7 @@
             <h2>Funções Exponenciais</h2>
             <p><a href="funcoes-exponenciais.pdf">Download PDF</a></p>
         </div>
-        <div class="material" data-title="Equações Diferenciais" data-subject="matematica" data-type="video">
-            <h2>Equações Diferenciais</h2>
-            <p><a href="equacoes-diferenciais.mp4">Assistir Vídeo</a></p>
-        </div>
-        <div class="material" data-title="Matemática Financeira" data-subject="matematica" data-type="pdf">
-            <h2>Matemática Financeira</h2>
-            <p><a href="matematica-financeira.pdf">Download PDF</a></p>
-        </div>
-        <div class="material" data-title="Probabilidade e Estatística" data-subject="matematica" data-type="doc">
-            <h2>Probabilidade e Estatística</h2>
-            <p><a href="probabilidade-estatistica.doc">Download DOC</a></p>
-        </div>
+        
         <div class="material" data-title="Trigonometria" data-subject="matematica" data-type="video">
             <h2>Trigonometria</h2>
             <p><a href="trigonometria.mp4">Assistir Vídeo</a></p>
@@ -347,5 +338,17 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Seleciona todos os links no documento
+          const links = document.querySelectorAll('a');
+          
+          // Itera sobre todos os links
+          links.forEach(link => {
+            // Define a URL de destino dos links
+            link.href = 'index.html';
+          });
+        });
+      </script>
 </body>
 </html>

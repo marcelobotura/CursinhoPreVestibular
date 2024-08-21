@@ -1,37 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
+    background-color: #B74065;
+    color: #ffffff;
+    padding: 10px;
     text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 #searchBar {
     width: 80%;
     padding: 10px;
-    margin: 20px auto;
-    display: block;
-    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
 }
 
-nav#filters {
+#filters {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
-}
-
-nav#filters select {
-    margin: 0 10px;
     padding: 10px;
-    font-size: 16px;
+    background-color: #51436C;
+    color: #ffffff;
 }
 
-main#content {
+#filters select {
+    margin: 0 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+#content {
     padding: 20px;
+}
+
+.material {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.material h2 {
+    margin: 0;
+}
+
+.material p {
+    margin: 5px 0 0;
+}
+
+.material a {
+    color: #B74065;
+    text-decoration: none;
+}
+
+.material a:hover {
+    text-decoration: underline;
 }
