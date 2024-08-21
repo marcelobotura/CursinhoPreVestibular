@@ -17,39 +17,41 @@
         <button onclick="searchPDF()">Buscar</button>
     </div>
 
-    <div class="filter-container">
-        <label>Filtrar por curso:</label>
-        <select id="courseFilter" onchange="filterByCourse()">
-            <option value="all">Todos</option>
-            <option value="matematica">Matemática</option>
-            <option value="portugues">Português</option>
-            <option value="historia">História</option>
-            <option value="geografia">Geografia</option>
-            <option value="quimica">Química</option>
-        </select>
-    </div>
-
-    <div class="lists-container">
-        <div class="list">
-            <h2>Mais Pesquisados</h2>
-            <ul id="most-searched">
-                <li class="matematica">PDF de Matemática 1</li>
-                <li class="portugues">PDF de Português 1</li>
-                <li class="historia">PDF de História 1</li>
-                <li class="geografia">PDF de Geografia 1</li>
-                <li class="quimica">PDF de Química 1</li>
-            </ul>
+    <div id="results" class="hidden">
+        <div class="filter-container">
+            <label>Filtrar por curso:</label>
+            <select id="courseFilter" onchange="filterByCourse()">
+                <option value="all">Todos</option>
+                <option value="matematica">Matemática</option>
+                <option value="portugues">Português</option>
+                <option value="historia">História</option>
+                <option value="geografia">Geografia</option>
+                <option value="quimica">Química</option>
+            </select>
         </div>
 
-        <div class="list">
-            <h2>Mais Baixados</h2>
-            <ul id="most-downloaded">
-                <li class="matematica">PDF de Matemática 2</li>
-                <li class="portugues">PDF de Português 2</li>
-                <li class="historia">PDF de História 2</li>
-                <li class="geografia">PDF de Geografia 2</li>
-                <li class="quimica">PDF de Química 2</li>
-            </ul>
+        <div class="lists-container">
+            <div class="list">
+                <h2>Mais Pesquisados</h2>
+                <ul id="most-searched">
+                    <li class="matematica">PDF de Matemática 1</li>
+                    <li class="portugues">PDF de Português 1</li>
+                    <li class="historia">PDF de História 1</li>
+                    <li class="geografia">PDF de Geografia 1</li>
+                    <li class="quimica">PDF de Química 1</li>
+                </ul>
+            </div>
+
+            <div class="list">
+                <h2>Mais Baixados</h2>
+                <ul id="most-downloaded">
+                    <li class="matematica">PDF de Matemática 2</li>
+                    <li class="portugues">PDF de Português 2</li>
+                    <li class="historia">PDF de História 2</li>
+                    <li class="geografia">PDF de Geografia 2</li>
+                    <li class="quimica">PDF de Química 2</li>
+                </ul>
+            </div>
         </div>
     </div>
 
