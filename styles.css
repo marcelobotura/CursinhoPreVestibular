@@ -29,10 +29,6 @@ body {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 .filter-container {
     margin: 20px auto;
     text-align: center;
