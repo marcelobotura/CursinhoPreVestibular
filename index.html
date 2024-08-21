@@ -1,70 +1,351 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <title>Site de Downloads</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="header">
-    <h1>Site de Downloads</h1>
-  </div>
+    <header>
+        <h1>Biblioteca de Pesquisa</h1>
+        <input type="text" id="searchBar" placeholder="Pesquisar...">
+    </header>
 
-  <div class="container">
-    <div class="search">
-      <a href="" target="_blank" hidden></a>
-      <input type="text" id="search" placeholder="Pesquisar...">
-      <div class="list"></div>
-      <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
-    </div>
-  </div>
+    <nav id="filters">
+        <select id="subjectFilter">
+            <option value="all">Todas as Disciplinas</option>
+            <option value="matematica">Matemática</option>
+            <option value="portugues">Português</option>
+        </select>
+        <select id="typeFilter">
+            <option value="all">Todos os Tipos</option>
+            <option value="pdf">PDF</option>
+            <option value="video">Vídeo</option>
+            <option value="doc">DOC</option>
+        </select>
+    </nav>
 
-  <div id="results" class="hidden">
-    <div class="filter-container">
-      <label>Filtrar por curso:</label>
-      <select id="courseFilter" onchange="filterByCourse()">
-        <option value="all">Todos</option>
-        <option value="matematica">Matemática</option>
-        <option value="portugues">Português</option>
-        <option value="historia">História</option>
-        <option value="geografia">Geografia</option>
-        <option value="quimica">Química</option>
-      </select>
-    </div>
+    <main id="content">
+        <!-- Materiais aleatórios -->
+        <div class="material" data-title="Álgebra Linear" data-subject="matematica" data-type="pdf">
+            <h2>Álgebra Linear</h2>
+            <p><a href="algebra-linear.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Geometria Analítica" data-subject="matematica" data-type="doc">
+            <h2>Geometria Analítica</h2>
+            <p><a href="geometria-analitica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Funções Exponenciais" data-subject="matematica" data-type="pdf">
+            <h2>Funções Exponenciais</h2>
+            <p><a href="funcoes-exponenciais.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Equações Diferenciais" data-subject="matematica" data-type="video">
+            <h2>Equações Diferenciais</h2>
+            <p><a href="equacoes-diferenciais.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática Financeira" data-subject="matematica" data-type="pdf">
+            <h2>Matemática Financeira</h2>
+            <p><a href="matematica-financeira.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Probabilidade e Estatística" data-subject="matematica" data-type="doc">
+            <h2>Probabilidade e Estatística</h2>
+            <p><a href="probabilidade-estatistica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Trigonometria" data-subject="matematica" data-type="video">
+            <h2>Trigonometria</h2>
+            <p><a href="trigonometria.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="História da Matemática" data-subject="matematica" data-type="pdf">
+            <h2>História da Matemática</h2>
+            <p><a href="historia-matematica.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Gramática Avançada" data-subject="portugues" data-type="doc">
+            <h2>Gramática Avançada</h2>
+            <p><a href="gramatica-avancada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Literatura Brasileira" data-subject="portugues" data-type="pdf">
+            <h2>Literatura Brasileira</h2>
+            <p><a href="literatura-brasileira.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Análise Sintática" data-subject="portugues" data-type="video">
+            <h2>Análise Sintática</h2>
+            <p><a href="analise-sintatica.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Interpretação de Texto" data-subject="portugues" data-type="doc">
+            <h2>Interpretação de Texto</h2>
+            <p><a href="interpretacao-texto.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Português para Concursos" data-subject="portugues" data-type="pdf">
+            <h2>Português para Concursos</h2>
+            <p><a href="portugues-concursos.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Compreensão de Leitura" data-subject="portugues" data-type="video">
+            <h2>Compreensão de Leitura</h2>
+            <p><a href="compreensao-leitura.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Acordo Ortográfico" data-subject="portugues" data-type="pdf">
+            <h2>Acordo Ortográfico</h2>
+            <p><a href="acordo-ortografico.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Linguística Aplicada" data-subject="portugues" data-type="doc">
+            <h2>Linguística Aplicada</h2>
+            <p><a href="linguistica-aplicada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática Básica" data-subject="matematica" data-type="pdf">
+            <h2>Matemática Básica</h2>
+            <p><a href="matematica-basica.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática Discreta" data-subject="matematica" data-type="doc">
+            <h2>Matemática Discreta</h2>
+            <p><a href="matematica-discreta.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Geometria Espacial" data-subject="matematica" data-type="video">
+            <h2>Geometria Espacial</h2>
+            <p><a href="geometria-espacial.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Funções Trigonométricas" data-subject="matematica" data-type="pdf">
+            <h2>Funções Trigonométricas</h2>
+            <p><a href="funcoes-trigonometricas.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Teoria dos Conjuntos" data-subject="matematica" data-type="doc">
+            <h2>Teoria dos Conjuntos</h2>
+            <p><a href="teoria-dos-conjuntos.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Estatística Descritiva" data-subject="matematica" data-type="video">
+            <h2>Estatística Descritiva</h2>
+            <p><a href="estatistica-descritiva.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Funções Lineares" data-subject="matematica" data-type="pdf">
+            <h2>Funções Lineares</h2>
+            <p><a href="funcoes-lineares.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática para Engenharia" data-subject="matematica" data-type="doc">
+            <h2>Matemática para Engenharia</h2>
+            <p><a href="matematica-engenharia.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="História da Matemática" data-subject="matematica" data-type="video">
+            <h2>História da Matemática</h2>
+            <p><a href="historia-matematica.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Teorema de Pitágoras" data-subject="matematica" data-type="pdf">
+            <h2>Teorema de Pitágoras</h2>
+            <p><a href="teorema-pitagoras.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Séries Numéricas" data-subject="matematica" data-type="doc">
+            <h2>Séries Numéricas</h2>
+            <p><a href="series-numericas.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Probabilidade Avançada" data-subject="matematica" data-type="video">
+            <h2>Probabilidade Avançada</h2>
+            <p><a href="probabilidade-avancada.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Lógica" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Lógica</h2>
+            <p><a href="matematica-logica.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática Aplicada" data-subject="matematica" data-type="doc">
+            <h2>Matemática Aplicada</h2>
+            <p><a href="matematica-aplicada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Estudos de Caso em Matemática" data-subject="matematica" data-type="video">
+            <h2>Estudos de Caso em Matemática</h2>
+            <p><a href="estudos-caso-matematica.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Poliedros e Geometria" data-subject="matematica" data-type="pdf">
+            <h2>Poliedros e Geometria</h2>
+            <p><a href="poliedros-geometria.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Teorema de Bayes" data-subject="matematica" data-type="doc">
+            <h2>Teorema de Bayes</h2>
+            <p><a href="teorema-bayes.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Estatística" data-subject="matematica" data-type="video">
+            <h2>Matemática e Estatística</h2>
+            <p><a href="matematica-estatistica.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Análise de Dados" data-subject="matematica" data-type="pdf">
+            <h2>Análise de Dados</h2>
+            <p><a href="analise-dados.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="O Papel da Matemática na Ciência" data-subject="matematica" data-type="doc">
+            <h2>O Papel da Matemática na Ciência</h2>
+            <p><a href="papel-matematica-ciencia.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Filosofia" data-subject="matematica" data-type="video">
+            <h2>Matemática e Filosofia</h2>
+            <p><a href="matematica-filosofia.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática no Ensino Médio" data-subject="matematica" data-type="pdf">
+            <h2>Matemática no Ensino Médio</h2>
+            <p><a href="matematica-ensino-medio.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Computação" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Computação</h2>
+            <p><a href="matematica-computacao.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="História da Matemática na Antiguidade" data-subject="matematica" data-type="video">
+            <h2>História da Matemática na Antiguidade</h2>
+            <p><a href="historia-matematica-antiguidade.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Arte" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Arte</h2>
+            <p><a href="matematica-arte.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Teoria dos Números" data-subject="matematica" data-type="doc">
+            <h2>Teoria dos Números</h2>
+            <p><a href="teoria-numeros.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática para o Ensino Superior" data-subject="matematica" data-type="video">
+            <h2>Matemática para o Ensino Superior</h2>
+            <p><a href="matematica-ensino-superior.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Engenharia" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Engenharia</h2>
+            <p><a href="matematica-engenharia.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Física" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Física</h2>
+            <p><a href="matematica-fisica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Estudos Matemáticos Avançados" data-subject="matematica" data-type="video">
+            <h2>Estudos Matemáticos Avançados</h2>
+            <p><a href="estudos-matematicos-avancados.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Tecnologia" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Tecnologia</h2>
+            <p><a href="matematica-tecnologia.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Análise Matemática" data-subject="matematica" data-type="doc">
+            <h2>Análise Matemática</h2>
+            <p><a href="analise-matematica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Ciências Naturais" data-subject="matematica" data-type="video">
+            <h2>Matemática e Ciências Naturais</h2>
+            <p><a href="matematica-ciencias-naturais.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática para o Ensino Básico" data-subject="matematica" data-type="pdf">
+            <h2>Matemática para o Ensino Básico</h2>
+            <p><a href="matematica-ensino-basico.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Estatística Aplicada" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Estatística Aplicada</h2>
+            <p><a href="matematica-estatistica-aplicada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Estudos Matemáticos Interdisciplinares" data-subject="matematica" data-type="video">
+            <h2>Estudos Matemáticos Interdisciplinares</h2>
+            <p><a href="estudos-matematicos-interdisciplinares.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Ciências Sociais" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Ciências Sociais</h2>
+            <p><a href="matematica-ciencias-sociais.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Teoria das Probabilidades" data-subject="matematica" data-type="doc">
+            <h2>Teoria das Probabilidades</h2>
+            <p><a href="teoria-probabilidades.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Economia" data-subject="matematica" data-type="video">
+            <h2>Matemática e Economia</h2>
+            <p><a href="matematica-economia.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Psicologia" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Psicologia</h2>
+            <p><a href="matematica-psicologia.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e História" data-subject="matematica" data-type="doc">
+            <h2>Matemática e História</h2>
+            <p><a href="matematica-historia.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Sociologia" data-subject="matematica" data-type="video">
+            <h2>Matemática e Sociologia</h2>
+            <p><a href="matematica-sociologia.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Biologia" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Biologia</h2>
+            <p><a href="matematica-biologia.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Linguística" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Linguística</h2>
+            <p><a href="matematica-linguistica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Música" data-subject="matematica" data-type="video">
+            <h2>Matemática e Música</h2>
+            <p><a href="matematica-musica.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Literatura" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Literatura</h2>
+            <p><a href="matematica-literatura.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Química" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Química</h2>
+            <p><a href="matematica-quimica.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Física Avançada" data-subject="matematica" data-type="video">
+            <h2>Matemática e Física Avançada</h2>
+            <p><a href="matematica-fisica-avancada.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Filosofia Contemporânea" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Filosofia Contemporânea</h2>
+            <p><a href="matematica-filosofia-contemporanea.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Astronomia" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Astronomia</h2>
+            <p><a href="matematica-astronomia.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Saúde" data-subject="matematica" data-type="video">
+            <h2>Matemática e Saúde</h2>
+            <p><a href="matematica-saude.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Educação" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Educação</h2>
+            <p><a href="matematica-educacao.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Engenharia de Software" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Engenharia de Software</h2>
+            <p><a href="matematica-engenharia-software.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Antropologia" data-subject="matematica" data-type="video">
+            <h2>Matemática e Antropologia</h2>
+            <p><a href="matematica-antropologia.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Geografia" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Geografia</h2>
+            <p><a href="matematica-geografia.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Sociologia Avançada" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Sociologia Avançada</h2>
+            <p><a href="matematica-sociologia-avancada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Filosofia da Educação" data-subject="matematica" data-type="video">
+            <h2>Matemática e Filosofia da Educação</h2>
+            <p><a href="matematica-filosofia-educacao.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Linguagem" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Linguagem</h2>
+            <p><a href="matematica-linguagem.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Literatura Comparada" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Literatura Comparada</h2>
+            <p><a href="matematica-literatura-comparada.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Música Contemporânea" data-subject="matematica" data-type="video">
+            <h2>Matemática e Música Contemporânea</h2>
+            <p><a href="matematica-musica-contemporanea.mp4">Assistir Vídeo</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Cultura" data-subject="matematica" data-type="pdf">
+            <h2>Matemática e Cultura</h2>
+            <p><a href="matematica-cultura.pdf">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Filosofia das Ciências" data-subject="matematica" data-type="doc">
+            <h2>Matemática e Filosofia das Ciências</h2>
+            <p><a href="matematica-filosofia-ciencias.doc">Download DOC</a></p>
+        </div>
+        <div class="material" data-title="Matemática e Ciências Humanas" data-subject="matematica" data-type="video">
+            <h2>Matemática e Ciências Humanas</h2>
+            <p><a href="matematica-ciencias-humanas.mp4">Assistir Vídeo</a></p>
+        </div>
+    </main>
 
-    <div class="lists-container">
-      <div class="list">
-        <h2>Mais Pesquisados</h2>
-        <ul id="most-searched">
-          <li class="matematica">PDF de Matemática 1</li>
-          <li class="portugues">PDF de Português 1</li>
-          <li class="historia">PDF de História 1</li>
-          <li class="geografia">PDF de Geografia 1</li>
-          <li class="quimica">PDF de Química 1</li>
-        </ul>
-      </div>
-
-      <div class="list">
-        <h2>Mais Baixados</h2>
-        <ul id="most-downloaded">
-          <li class="matematica">PDF de Matemática 2</li>
-          <li class="portugues">PDF de Português 2</li>
-          <li class="historia">PDF de História 2</li>
-          <li class="geografia">PDF de Geografia 2</li>
-          <li class="quimica">PDF de Química 2</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <script src="sugestoes.js"></script>
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
