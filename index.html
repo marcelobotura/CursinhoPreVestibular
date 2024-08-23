@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material de Apoio Cursinho Pré-Vestibular</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-
-    
+    <script src="script.js" defer></script> <!-- Adicionei defer para garantir que o script seja carregado após o DOM -->
 </head>
 <body>
     <header>
@@ -27,7 +25,6 @@
             <option value="pdf">PDF</option>
             <option value="doc">DOC</option>
             <option value="video">VÍDEOS</option>
-            
         </select>
     </nav>
 
@@ -45,7 +42,6 @@
             <h2>Análise combinatória</h2>
             <p><a href="">Download PDF</a></p>
         </div>
-        
         <div class="material" data-title="Sequências" data-subject="matematica" data-type="video">
             <h2>Sequências</h2>
             <p><a href="">Assistir Vídeo</a></p>
@@ -58,15 +54,14 @@
             <h2>Geometria analítica</h2>
             <p><a href="">Download DOC</a></p>
         </div>
-        <div class="material" data-title="Geometria espacial" data-subject="matematica" data-type="pdf">
+        <div class="material" data-title="Literatura Brasileira" data-subject="portugues" data-type="pdf"> <!-- Corrigido o assunto para português -->
             <h2>Literatura Brasileira</h2>
             <p><a href="">Download PDF</a></p>
         </div>
-        <div class="material" data-title="Análise Sintática" data-subject="matematica" data-type="video">
+        <div class="material" data-title="Análise Sintática" data-subject="portugues" data-type="video"> <!-- Corrigido o assunto para português -->
             <h2>Análise Sintática</h2>
             <p><a href="">Assistir Vídeo</a></p>
         </div>
-        
         <div class="material" data-title="Fatoração de Polinômios" data-subject="matematica" data-type="pdf">
             <h2>Fatoração de Polinômios</h2>
             <p><a href="https://drive.google.com/uc?export=download&id=1p8ZOK9WnJ2rrJSr3b3QwNkGaQtgBfOt9">Download PDF</a></p>
@@ -85,26 +80,15 @@
             <h2>Interpretação de Texto</h2>
             <p><a href="">Download DOC</a></p>
         </div>
-         <!-- Materiais história -->
-         <div class="material" data-title="Mitologia Grega" data-subject="historia" data-type="doc">
+
+        <!-- Materiais história -->
+        <div class="material" data-title="Mitologia Grega" data-subject="historia" data-type="doc">
             <h2>Mitologia Grega</h2>
             <p><a href="" >Download PDF</a></p>
         </div>
-
     </main>
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          // Seleciona todos os links no documento
-          const links = document.querySelectorAll('a');
-          
-          // Itera sobre todos os links
-          links.forEach(link => {
-            // Define a URL de destino dos links
-            link.href = 'index.html';
-          });
-        });
-      </script>
+    <!-- Mensagem para quando nenhum resultado for encontrado -->
+    <div id="noResultsMessage" style="display:none; text-align: center; margin-top: 20px; color: #B74065;">Nenhum material encontrado.</div>
 </body>
 </html>
