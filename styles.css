@@ -1,18 +1,14 @@
 body {
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     background-color: #B74065;
-    color: #ffffff;
+    color: #fff;
     padding: 10px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
 }
 
 #searchBar {
@@ -28,7 +24,7 @@ header h1 {
     justify-content: center;
     padding: 10px;
     background-color: #51436C;
-    color: #ffffff;
+    color: #fff;
 }
 
 #filters select {
@@ -55,7 +51,7 @@ header h1 {
 }
 
 .material p {
-    margin: 5px 0 0;
+    margin: 5px 0;
 }
 
 .material a {
@@ -65,4 +61,25 @@ header h1 {
 
 .material a:hover {
     text-decoration: underline;
+}
+
+.download-count {
+    font-weight: bold;
+    color: #51436C;
+}
+
+.vezes-abaixado {
+    margin: 5px 0 0;
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #272727;
+}
+
+footer {
+    background-color: #51436C;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
 }
