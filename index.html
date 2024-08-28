@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material de Apoio Cursinho Pré-Vestibular</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script> <!-- Adicionei defer para garantir que o script seja carregado após o DOM -->
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            
+            
+        </ul>
+    </nav>
     <header>
         <h1>Material de Apoio <br> Cursinho Pré-Vestibular</h1>
         <input type="text" id="searchBar" placeholder="Pesquisar...">
@@ -17,103 +24,50 @@
         <select id="subjectFilter">
             <option value="all">Todas as Disciplinas</option>
             <option value="matematica">Matemática</option>
-            <option value="portugues">Português</option>
-            <option value="historia">História</option>
+            <!-- Adicione outros filtros de disciplina aqui -->
         </select>
         <select id="typeFilter">
             <option value="all">Todos os Tipos</option>
             <option value="pdf">PDF</option>
-            <option value="doc">DOC</option>
-            <option value="video">VÍDEOS</option>
+            
+         
         </select>
     </nav>
 
+    
+
     <main id="content">
+        <!-- Matemática -->
+        <div class="material" data-title="Geometria plana" data-subject="matematica" data-type="pdf">
+            <h2>Geometria plana</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/conjuntos-material-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Análise Combinatória" data-subject="matematica" data-type="pdf">
+            <h2>Análise Combinatória</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/analise-combinatoria-material-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
+        <div class="material" data-title="Permutação Arranjos e Combinatória" data-subject="matematica" data-type="pdf">
+            <h2>Permutação Arranjos e Combinatória</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/permutação-arranjos-e-combinação-material-apoio.pdf" rel="interno">Download PDF</a></p>
+             <div class="material" data-title="Progreção Aritmética" data-subject="matematica" data-type="pdf">
+            <h2>Progreção Aritmética</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/progressao-aritmetica-cursinho-material-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
 
-        <!-- Materiais matemática -->
-<div class="material" data-title="Geometria plana" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Geometria plana</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Probabilidade" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Probabilidade</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Análise combinatória" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Análise combinatória</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Sequências" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Sequências</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Funções" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Funções</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.usercontent.google.com/download?id=1YLi4yihMloIWVcYZoNega5PzYeHivBaA">Download PDF</a></p>
-</div>
-<div class="material" data-title="Geometria analítica" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Geometria analítica</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Literatura Brasileira" data-subject="portugues" data-type="pdf" data-downloads="5">
-    <h2>Literatura Brasileira</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Análise Sintática" data-subject="portugues" data-type="pdf" data-downloads="5">
-    <h2>Análise Sintática</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Fatoração de Polinômios" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Fatoração de Polinômios</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1p8ZOK9WnJ2rrJSr3b3QwNkGaQtgBfOt9">Download PDF</a></p>
-</div>
-<div class="material" data-title="Conjuntos" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Conjuntos</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Potenciação e Radiciação" data-subject="matematica" data-type="pdf" data-downloads="5">
-    <h2>Potenciação e Radiciação</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
+        <div class="material" data-title="Potência" data-subject="matematica" data-type="pdf">
+            <h2>Potência</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/potencia-material-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
 
-<!-- Materiais português -->
-<div class="material" data-title="Gramatica" data-subject="portugues" data-type="pdf" data-downloads="5">
-    <h2>Gramatica</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-
-<!-- Materiais história -->
-<div class="material" data-title="Mitologia Grega" data-subject="historia" data-type="pdf" data-downloads="5">
-    <h2>Mitologia Grega</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-<div class="material" data-title="Egito" data-subject="historia" data-type="pdf" data-downloads="5">
-    <h2>Egito</h2>
-    <p class="vezes-abaixado">Baixado <span class="download-count">0</span> vezes</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1KcMYsV915qohgyFo18qmcQYjymOLeju0">Download PDF</a></p>
-</div>
-
+        </div>
     </main>
 
     <!-- Mensagem para quando nenhum resultado for encontrado -->
     <div id="noResultsMessage" style="display:none; text-align: center; margin-top: 20px; color: #B74065;">Nenhum material encontrado.</div>
-    
-    <!-- Rodapé -->
-    <footer>
-        <p> © 2024 Material de Apoio Cursinho Pré-Vestibular</p>
-    </footer>
 </body>
 </html>

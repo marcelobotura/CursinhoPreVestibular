@@ -2,16 +2,23 @@ const searchBar = document.getElementById('searchBar');
 const subjectFilter = document.getElementById('subjectFilter');
 const typeFilter = document.getElementById('typeFilter');
 
-// Verificar se os elementos existem antes de adicionar os event listeners
-if (searchBar && subjectFilter && typeFilter) {
-    const debouncedFilterContent = debounce(filterContent, 300); // Usando debounce para otimizar a função de filtro
-
-    searchBar.addEventListener('input', debouncedFilterContent);
-    subjectFilter.addEventListener('change', filterContent);
-    typeFilter.addEventListener('change', filterContent);
+// Verificar se a opção "Todas as Disciplinas" já existe no filtro
+const allOption = subjectFilter.querySelector('option[value="all"]');
+if (!allOption) {
+    const option = document.createElement('option');
+    option.value = "all";
+    option.text = "Todas as Disciplinas";
+    subjectFilter.add(option, subjectFilter.firstChild);
 }
 
-// Função debounce para limitar a frequência de chamadas da função de filtro
+if (searchBar && subjectFilter && typeFilter) {
+    const debouncedFilterContent = debounce(filterContent, 300);
+
+    searchBar.addEventListener('input', debouncedFilterContent);
+    subjectFilter.addEventListener('change', debouncedFilterContent);
+    typeFilter.addEventListener('change', debouncedFilterContent);
+}
+
 function debounce(fn, delay) {
     let timeoutId;
     return function(...args) {
@@ -50,56 +57,3 @@ function filterContent() {
         noResultsMessage.style.display = hasResults ? 'none' : 'block';
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Função para ordenar as divs
-    function sortMaterials() {
-        const materialsContainer = document.getElementById('content');
-        const materials = Array.from(materialsContainer.querySelectorAll('.material'));
-
-        materials.sort((a, b) => {
-            const aHasLink = a.querySelector('a') !== null;
-            const bHasLink = b.querySelector('a') !== null;
-
-            if (aHasLink && !bHasLink) return -1;
-            if (!aHasLink && bHasLink) return 1;
-
-            // Se ambos têm links, ordenar pela quantidade de downloads
-            const aDownloads = parseInt(a.getAttribute('data-downloads'), 10);
-            const bDownloads = parseInt(b.getAttribute('data-downloads'), 10);
-
-            return bDownloads - aDownloads; // Ordena em ordem decrescente
-        });
-
-        // Reordenar as divs no DOM
-        materials.forEach(material => {
-            materialsContainer.appendChild(material);
-        });
-    }
-
-    // Função para incrementar a contagem de downloads
-    function updateDownloadCount(materialDiv) {
-        const downloadCountSpan = materialDiv.querySelector('.download-count');
-        let currentCount = parseInt(downloadCountSpan.textContent, 10);
-        currentCount += 1;
-        downloadCountSpan.textContent = currentCount;
-        materialDiv.setAttribute('data-downloads', currentCount);
-
-        sortMaterials(); // Reordenar após o incremento
-    }
-
-    // Adiciona o evento de clique nos links para atualizar o contador
-    const materials = document.querySelectorAll('.material a');
-    materials.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita o redirecionamento imediato para capturar o clique
-            const materialDiv = this.closest('.material');
-            updateDownloadCount(materialDiv);
-
-            // Redireciona para o link após o incremento
-            window.location.href = this.href;
-        });
-    });
-
-    sortMaterials(); // Ordena as divs na inicialização
-});
