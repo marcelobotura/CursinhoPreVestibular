@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* Fundo cinza clarinho */
 }
 
 header {
@@ -72,6 +73,7 @@ header {
     margin: 10px 0;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Mantém o fundo dos materiais em branco para contraste */
 }
 
 .material h2 {
@@ -101,4 +103,26 @@ header {
     text-transform: uppercase;
     font-size: 9px;
     color: #272727;
+}
+
+/* Estilos adicionais para os botões das turmas */
+.turma-button {
+    display: block; /* Exibir como bloco para que fiquem um embaixo do outro */
+    width: 30%; /* Definir uma largura fixa */
+    padding: 10px 20px;
+    margin: 10px auto; /* Centralizar os botões */
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container {
+   
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
