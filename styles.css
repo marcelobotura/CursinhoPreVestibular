@@ -12,6 +12,10 @@ header {
     text-align: center;
 }
 
+h1 {
+    font-size: 12pt;
+}
+
 #searchBar {
     width: 80%;
     padding: 10px;
@@ -105,26 +109,41 @@ header {
     color: #272727;
 }
 
-/* Estilos adicionais para os botões das turmas */
-.turma-button {
-    display: block; /* Exibir como bloco para que fiquem um embaixo do outro */
-    width: 30%; /* Definir uma largura fixa */
-    padding: 10px 20px;
-    margin: 10px auto; /* Centralizar os botões */
-    background-color: #28a745; /* Cor verde */
-    color: white;
-    text-align: center;
+
+.material1 {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color:#51436C; /* Mantém o fundo dos materiais em branco para contraste */
+}
+.material1 h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.material1 p {
+    margin: 5px 0;
+}
+
+.material1 a {
+    color: #ffffff;
     text-decoration: none;
+}
+
+.material1 a:hover {
+    text-decoration: underline;
+}
+
+.download-count {
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #51436C;
 }
 
-.button-container {
-   
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
+.materia1 {
+    margin: 5px 0 0;
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #ffffff;
 }
-
-
