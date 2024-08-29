@@ -12,6 +12,7 @@
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="turmas.html">Turmas</a></li>
+            <li><a href="curso-matematica.html"> Licenciatura em Matemática</a></li>
             <!--<li><a href="calendario.html">Calendário</a></li>-->
             
             
@@ -24,12 +25,13 @@
 
     <nav id="filters">
         <select id="subjectFilter">
-            <option value="all">Todas as Disciplinas</option>
+            <option value="all">Disciplinas / Horários</option>
             <option value="matematica">Matemática</option>
+            <option value="cronograma">Cronograma</option>
             <!-- Adicione outros filtros de disciplina aqui -->
         </select>
         <select id="typeFilter">
-            <option value="all">Todos os Tipos</option>
+            <option value="all">Tipo</option>
             <option value="pdf">PDF</option>
             
          
@@ -40,6 +42,12 @@
 
     <main id="content">
         <!-- Matemática -->
+        <div class="material" data-title="Função" data-subject="matematica" data-type="pdf">
+            <h2>Função</h2>
+            <p class="materia">matemática</p>
+            <p><a href="pdf/função-materia-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
+
         <div class="material" data-title="Conjuntos" data-subject="matematica" data-type="pdf">
             <h2>Conjuntos</h2>
             <p class="materia">matemática</p>
@@ -61,13 +69,39 @@
              <div class="material" data-title="Progreção Aritmética" data-subject="matematica" data-type="pdf">
             <h2>Progreção Aritmética</h2>
             <p class="materia">matemática</p>
-            <p><a href="pdf/progressao-aritmetica-cursinho-material-apoio.pdf" rel="interno">Download PDF</a></p>
+            <p><a href="pdf/pa-pg-cursinho-material-apoio.pdf" rel="interno">Download PDF</a></p>
         </div>
 
         <div class="material" data-title="Potência" data-subject="matematica" data-type="pdf">
             <h2>Potência</h2>
             <p class="materia">matemática</p>
             <p><a href="pdf/potencia-material-apoio.pdf" rel="interno">Download PDF</a></p>
+        </div>
+
+        <!--horario-->
+
+        <div class="material" data-title="Cronograma CEB Darci Pedro Zanatta" data-subject="cronograma" data-type="pdf">
+            <h2>CEB Darci Pedro Zanatta</h2>
+            <p class="materia">cronograma</p>
+            <p><a href="pdf/cronograma/CEB Darci Pedro Zanatta_CRONOGRAMA e HORÁRIO_CPV_edição 2024.pdf" rel="interno">Download PDF</a></p>
+        </div>
+
+        <div class="material" data-title="Noite Cronograma Esc Érico Veríssimo" data-subject="cronograma" data-type="pdf">
+            <h2>Cronograma Esc Érico Veríssimo (NOITE)</h2>
+            <p class="materia">cronograma</p>
+            <p><a href="pdf/cronograma/noite_ESCOLA Érico Veríssimo_CRONOGRAMA e HORÁRIO_CPV_edição 2024.pdf" rel="interno">Download PDF</a></p>
+        </div>
+
+        <div class="material" data-title="Cronograma Esc Érico Veríssimo" data-subject="cronograma" data-type="pdf">
+            <h2>Cronograma Esc Érico Veríssimo</h2>
+            <p class="materia">cronograma</p>
+            <p><a href="pdf/cronograma/sábado manhã_ESCOLA  Érico Veríssimo_CRONOGRAMA e HORÁRIO_CPV_edição 2024.pdf" rel="interno">Download PDF</a></p>
+        </div>
+
+        <div class="material" data-title="Cronograma Unioeste" data-subject="cronograma" data-type="pdf">
+            <h2>Cronograma Unioeste</h2>
+            <p class="Cronograma Unioeste">cronograma</p>
+            <p><a href="pdf/cronograma/UNIOESTE_CRONOGRAMA e HORÁRIO_CPV_edição 2024.pdf" rel="interno">Download PDF</a></p>
         </div>
 
        
